@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('slick-carousel');
 
 // window.Vue = require('vue');
 
@@ -20,3 +21,15 @@ require('./bootstrap');
 // const app = new Vue({
 //     el: '#app'
 // });
+
+
+$('#carousel').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000
+});

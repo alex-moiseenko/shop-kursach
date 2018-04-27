@@ -1,9 +1,68 @@
 
+@import 'variables';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+//Slick Carouse;
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+
+header{
+  .top-line{
+    background-color: lightgray;
+    font-size: 0.8em;
+    .top-menu{
+      div{
+
+        padding: 0;
+        text-transform: uppercase;
+      }
+      div:nth-child(1),div:nth-child(2),div:nth-child(3){
+        border-right: 1px solid black;
+      }
+    }
+  }
+
+  .triangle{
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 60px 150px 0 150px;
+    border-color: white transparent transparent transparent;
+    position: relative;
+    z-index: 100;
+  }
+
+  #carousel{
+    margin-top: -60px;
+    position: relative;
+    z-index: 1;
+    .my-slide{
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 500px;
+    }
+    .slick-dots{
+      bottom: 20px !important;
+    }
+  }
+
+  .social{
+    height: 35px;
+    width: 35px;
+    color: $ochra;
+    border: 1px solid $ochra;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    &:hover{
+      background-color: $ochra;
+      color: white;
+    }
+  }
 }
 
