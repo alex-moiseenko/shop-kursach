@@ -10,10 +10,14 @@
 header{
   .top-line{
     background-color: lightgray;
-    font-size: 0.8em;
+    font-size: 0.7em;
+    .phone{
+      transform: rotate(90deg);
+      margin:0px 10px;
+    }
     .top-menu{
-      div{
 
+      div{
         padding: 0;
         text-transform: uppercase;
       }
@@ -23,33 +27,12 @@ header{
     }
   }
 
-  .triangle{
-    display: block;
-    margin: 0 auto;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 60px 150px 0 150px;
-    border-color: white transparent transparent transparent;
-    position: relative;
-    z-index: 100;
-  }
-
-  #carousel{
-    margin-top: -60px;
-    position: relative;
-    z-index: 1;
-    .my-slide{
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      height: 500px;
-    }
-    .slick-dots{
-      bottom: 20px !important;
+  .menu {
+    font-style: italic;
+    a {
+      color: black;
     }
   }
-
   .social{
     height: 35px;
     width: 35px;
@@ -64,5 +47,479 @@ header{
       color: white;
     }
   }
+
+  .triangle{
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 60px 150px 0 150px;
+    border-color: white transparent transparent transparent;
+    position: relative;
+    z-index: 100;
+  }
 }
 
+
+
+
+#carousel{
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+  .my-slide{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 700px;
+  }
+  .slick-dots{
+    bottom: 20px !important;
+  }
+  div{
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0 auto;
+
+      .border1 {
+        width: 300px;
+        margin-top: 150px;
+        border: 2px solid white;
+        height: 250px;
+
+        .border2 {
+          border: 1px solid white;
+          height: 96%;
+          width: 96%;
+          margin: 2% 2%;
+        }
+        h6 {
+          color: white;
+          margin: 17px 0px;
+        }
+        p {
+          color: white;
+        }
+
+          .smallerline1 {
+            height: 1px;
+            width: 50%;
+            background-color: white;
+            margin: 10px 0px;
+            float: right;
+          }
+          .biggerline1 {
+            height: 1px;
+            background-color: white;
+            width: 70%;
+            float: right;
+          }
+        .smallerline2 {
+          height: 1px;
+          width: 50%;
+          background-color: white;
+          margin: 10px 0px;
+          float: left;
+        }
+        .biggerline2 {
+          height: 1px;
+          background-color: white;
+          width: 70%;
+          float: left;
+        }
+
+        .shopNow {
+          background-color: darkorange;
+          height: 50px;
+          width: 80%;
+          margin: 50px auto;
+          p {
+            padding: 13px 0px;
+          }
+        }
+      }
+  }
+}
+
+
+
+.customerService{
+  height: 80px;
+  width: 100%;
+  color: white;
+  margin: 30px 0px;
+
+  p{
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+  span {
+    margin-bottom: 10px;
+    font-size: 0.7em;
+  }
+
+  .serviceImg{
+    margin: 20px 0px ;
+  }
+
+  .shipment{
+    background-color: $ochra;
+    height: 100%;
+    width: 100%;
+    .serviceImg1{
+      margin: 20px 0px ;
+    }
+
+    .arrow1{
+      background-color: white;
+
+    }
+    .triangle1{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 40px 0 40px 30px;
+      border-color: transparent transparent transparent $ochra;
+      margin-left: -15px;
+
+    }
+
+  }
+  .returns{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    .serviceImg2{
+      margin: 18px 0px ;
+    }
+    .triangle2{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 40px 0 40px 30px;
+      border-color: transparent transparent transparent white;
+      margin-left: -15px;
+    }
+    .triangle3{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 40px 30px 40px 0;
+      border-color: transparent white transparent transparent;
+      margin-left: -13px;
+    }
+  }
+  .support{
+    background-color: $ochra;
+    height: 100%;
+    width: 100%;
+    .serviceImg3{
+      margin: 17px 0px ;
+    }
+
+    .arrow1 {
+      background-color: white;
+    }
+      .triangle4{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 40px 30px 40px 0;
+      border-color: transparent $ochra transparent transparent;
+        margin-left: -13px;
+    }
+  }
+}
+
+
+
+.paragraphHeader{
+  margin-top: 70px;
+  margin-bottom: 50px;
+
+  .thinline{
+    background-color: lightgrey;
+    width: 100%;
+    height: 1px;
+    margin-top: 15px;
+  }
+  .square{
+    background-color: $ochra;
+    width:15px;
+    height: 15px;
+    transform: rotate(45deg);
+    margin-top: 8px;
+  }
+  p{
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-style: italic ;
+  }
+}
+
+
+
+.handPickedContent{
+  .items{
+    div{
+      padding: 10px 10px;
+      padding-bottom: 30px;
+
+      .whiteFrame{
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        border: 3px solid white;
+        z-index: 100;
+        width: 90%;
+        height:340px;
+
+        &:hover{
+          background:#111111;
+          opacity: 0.4;
+          border: none;
+        }
+      }
+      img{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 380px;
+        z-index: 1;
+        margin-top: -360px;
+      }
+
+    }
+    .longitem{
+      .whiteFrame{
+        height:740px;
+      }
+      img {
+        margin-top: -760px;
+        height: 780px;
+      }
+    }
+  }
+
+}
+
+.summerCollCont{
+  border: 1px solid lightgrey;
+  width:100%;
+  height: 100%;
+  padding: 10px 20px;
+
+  .summerItems {
+    padding: 10px 0px;
+    margin: 0px -8px;
+
+    .shadow{
+      display: block;
+      position: relative;
+      height:300px;
+      width:100%;
+      z-index: 100;
+    }
+    img{
+      display: block;
+      position: relative;
+      width: 100%;
+      margin-top: -300px;
+      height: 300px;
+      z-index: 1;
+    }
+    .addToCart {
+      margin: 0 auto;
+
+      .triangle1 {
+        display: block;
+        position: relative;
+        margin-top: -40px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 40px 40px;
+        border-color: transparent transparent #000000 transparent;
+        z-index: 200;
+      }
+      .rectangle{
+        display: block;
+        position: relative;
+        margin-top:-40px;
+        width: 100px;
+        height: 40px;
+        background-color: black;
+        z-index: 200;
+        text-transform: uppercase;
+        text-align: center;
+        color:white;
+        font-size: 0.65em;
+        padding-top: 12px;
+      }
+      .triangle2 {
+        display: block;
+        position: relative;
+        margin-top:-40px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 40px 0 0 40px;
+        border-color: transparent transparent transparent #000000;
+        z-index: 200;
+      }
+
+    }
+    &:hover{
+      .shadow {
+        background: #111111;
+        opacity: 0.4;
+      }
+      .triangle1{
+        border-color: transparent transparent darkorange transparent;        }
+      .rectangle{
+        background-color: darkorange;
+      }
+      .triangle2{
+        border-color: transparent transparent transparent darkorange;
+      }
+    }
+  }
+}
+
+.brandContent{
+  padding: 50px 0px;
+}
+
+
+.customersSays{
+  background-color: $ochra;
+  height:100%;
+  padding-bottom: 50px;
+
+  .triangle-bottom{
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 150px 0 150px;
+    border-color: white transparent transparent transparent;
+    position: relative;
+    z-index: 100;
+  }
+  .quote{
+    color: white;
+    font-style: italic;
+    margin-top: 100px;
+    font-size:0.9em;
+    margin-bottom: 50px;
+  }
+  .name {
+    font-size:1.7em;
+    font-style: italic;
+  }
+  .profession{
+    color: grey;
+    text-transform: uppercase;
+  }
+}
+
+
+footer{
+  padding-top:50px;
+  padding-bottom:50px;
+  background-color: #111111;
+  height:100%;
+  p{
+    margin-left:40px;
+    color:white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+  }
+  ul{
+    //margin-left: -1em;
+  }
+  li{
+    color:grey;
+    list-style-type: none;
+    font-size: 0.7em;
+    margin-bottom:5px;
+  }
+  .socialMedias{
+    margin-top:30px;
+    margin-bottom: 30px;
+  }
+  .socialFooter{
+    height: 42px;
+    width: 42px;
+    color: #111111;
+    border: 1px solid white;
+    background-color: white;
+    padding: 9px;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    &:hover{
+      background-color: #111111;
+      color: white;
+    }
+  }
+  .stayConnect{
+    margin-left: 0px;
+  }
+
+  .inputField{
+    background-color: #111111;
+    color:grey;
+    font-size: 0.6em;
+    padding:10px;
+    border:2px solid #111111;
+  }
+  .subscribeButton{
+    background-color: #323030;
+    color:white;
+    text-transform: uppercase;
+    border:2px solid #323030;
+    font-size:0.6em;
+    padding: 7px 10px;
+  }
+  .emailInput{
+    border: 1px solid #323030;
+    margin-left: 0px;
+  }
+  .thinLineInFooter{
+    background-color: #323030;
+    width: 100%;
+    height: 1px;
+    margin-top: 50px;
+  }
+  .triangle-footer{
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 10px 0 10px;
+    border-color: #323030 transparent transparent transparent;
+    position: relative;
+    z-index: 100;
+  }
+  .rightsSignBlock{
+    margin: 20px 0px;
+  }
+  .rightsSign{
+    color:#323030;
+    font-size:0.6em;
+  }
+  .payment{
+    height: 40px;
+    width: 25px;
+    color: #323030;
+    text-align: left;
+    display: block;
+  }
+}
