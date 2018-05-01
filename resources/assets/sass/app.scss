@@ -87,6 +87,7 @@ header{
         margin-top: 150px;
         border: 2px solid white;
         height: 250px;
+      }
 
         .border2 {
           border: 1px solid white;
@@ -102,19 +103,19 @@ header{
           color: white;
         }
 
-          .smallerline1 {
-            height: 1px;
-            width: 50%;
-            background-color: white;
-            margin: 10px 0px;
-            float: right;
-          }
-          .biggerline1 {
-            height: 1px;
-            background-color: white;
-            width: 70%;
-            float: right;
-          }
+        .smallerline1 {
+          height: 1px;
+          width: 50%;
+          background-color: white;
+          margin: 10px 0px;
+          float: right;
+        }
+        .biggerline1 {
+          height: 1px;
+          background-color: white;
+          width: 70%;
+          float: right;
+        }
         .smallerline2 {
           height: 1px;
           width: 50%;
@@ -138,9 +139,11 @@ header{
             padding: 13px 0px;
           }
         }
-      }
+
   }
 }
+
+
 
 
 
@@ -522,4 +525,56 @@ footer{
     text-align: left;
     display: block;
   }
+}
+
+
+
+
+.catalogContainer {
+  margin-top: 30px;
+
+  .filters{
+    text-align: left;
+    li{
+      margin-left: -40px;
+      list-style-type: none;
+    }
+    .filterBlock{
+      margin-bottom: 30px;
+
+    }
+    li:nth-child(1){
+      margin-top: 10px;
+    }
+
+
+    .checkboxes{
+      margin-right: 5px;
+
+
+    }
+
+  }
+
+  .catalogItems {
+    text-align: center;
+    .catalogItem {
+      margin-bottom: 30px;
+    }
+    .images {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    a {
+      color: black;
+    }
+    span {
+
+      text-transform: uppercase;
+    }
+    .clearfix {
+      clear: both;
+    }
+  }
+
 }

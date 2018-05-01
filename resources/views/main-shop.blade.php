@@ -156,12 +156,12 @@
                                         <h6>mid-season</h6>
                                         <h1>sale</h1>
                                         <div class="row">
-                                            <div class ="lines">
+                                            <div class ="col-lg-5">
                                                 <div class="smallerline1"></div>
                                                 <div class="biggerline1"></div>
                                             </div>
-                                                <div class ="upto"><p>up to</p></div>
-                                            <div class ="lines">
+                                                <div class ="col-lg-2"><p>up to</p></div>
+                                            <div class ="col-lg-5">
                                                 <div class="smallerline2"></div>
                                                 <div class="biggerline2"></div>
                                             </div>

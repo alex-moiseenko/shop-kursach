@@ -10758,23 +10758,23 @@ header .triangle {
   height: 250px;
 }
 
-#carousel div .border1 .border2 {
+#carousel div .border2 {
   border: 1px solid white;
   height: 96%;
   width: 96%;
   margin: 2% 2%;
 }
 
-#carousel div .border1 h6 {
+#carousel div h6 {
   color: white;
   margin: 17px 0px;
 }
 
-#carousel div .border1 p {
+#carousel div p {
   color: white;
 }
 
-#carousel div .border1 .smallerline1 {
+#carousel div .smallerline1 {
   height: 1px;
   width: 50%;
   background-color: white;
@@ -10782,14 +10782,14 @@ header .triangle {
   float: right;
 }
 
-#carousel div .border1 .biggerline1 {
+#carousel div .biggerline1 {
   height: 1px;
   background-color: white;
   width: 70%;
   float: right;
 }
 
-#carousel div .border1 .smallerline2 {
+#carousel div .smallerline2 {
   height: 1px;
   width: 50%;
   background-color: white;
@@ -10797,21 +10797,21 @@ header .triangle {
   float: left;
 }
 
-#carousel div .border1 .biggerline2 {
+#carousel div .biggerline2 {
   height: 1px;
   background-color: white;
   width: 70%;
   float: left;
 }
 
-#carousel div .border1 .shopNow {
+#carousel div .shopNow {
   background-color: darkorange;
   height: 50px;
   width: 80%;
   margin: 50px auto;
 }
 
-#carousel div .border1 .shopNow p {
+#carousel div .shopNow p {
   padding: 13px 0px;
 }
 
@@ -11211,5 +11211,55 @@ footer .payment {
   color: #323030;
   text-align: left;
   display: block;
+}
+
+.catalogContainer {
+  margin-top: 30px;
+}
+
+.catalogContainer .filters {
+  text-align: left;
+}
+
+.catalogContainer .filters li {
+  margin-left: -40px;
+  list-style-type: none;
+}
+
+.catalogContainer .filters .filterBlock {
+  margin-bottom: 30px;
+}
+
+.catalogContainer .filters li:nth-child(1) {
+  margin-top: 10px;
+}
+
+.catalogContainer .filters .checkboxes {
+  margin-right: 5px;
+}
+
+.catalogContainer .catalogItems {
+  text-align: center;
+}
+
+.catalogContainer .catalogItems .catalogItem {
+  margin-bottom: 30px;
+}
+
+.catalogContainer .catalogItems .images {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.catalogContainer .catalogItems a {
+  color: black;
+}
+
+.catalogContainer .catalogItems span {
+  text-transform: uppercase;
+}
+
+.catalogContainer .catalogItems .clearfix {
+  clear: both;
 }
 

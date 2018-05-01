@@ -23,6 +23,10 @@ Route::get('/test', function (){
     return view('main-shop');
 });
 
+Route::get('/catalog', function (){
+    return view('catalog');
+});
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
