@@ -27,6 +27,13 @@ Route::get('/catalog', function (){
     return view('catalog');
 });
 
+Route::get('/product', function (){
+    return view('product');
+});
+
+Route::get('/checkout', function (){
+    return view('checkout');
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
