@@ -10716,7 +10716,7 @@ header .social:hover {
   color: white;
 }
 
-header .triangle {
+.triangle {
   display: block;
   margin: 0 auto;
   width: 0;

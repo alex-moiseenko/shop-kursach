@@ -17,10 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/laravel', 'HomeController@index')->name('home');
 
-Route::get('/test', function (){
-    return view('main-shop');
+Route::get('/', function (){
+    return view('index');
 });
 
 Route::get('/catalog', function (){

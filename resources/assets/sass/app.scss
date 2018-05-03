@@ -48,21 +48,20 @@ header{
     }
   }
 
-  .triangle{
-    display: block;
-    margin: 0 auto;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 60px 150px 0 150px;
-    border-color: white transparent transparent transparent;
-    position: relative;
-    z-index: 100;
-  }
 }
 
 
-
+.triangle{
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 60px 150px 0 150px;
+  border-color: white transparent transparent transparent;
+  position: relative;
+  z-index: 100;
+}
 
 #carousel{
   margin-top: -60px;
@@ -142,10 +141,6 @@ header{
 
   }
 }
-
-
-
-
 
 .customerService{
   height: 80px;
