@@ -22,6 +22,7 @@ class IndexController extends Controller
     }
 
     public function product($id){
-        return view('product');
+        $product = Product::find($id);
+        return view('product',compact('product'));
     }
 }

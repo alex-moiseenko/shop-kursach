@@ -97,9 +97,9 @@
                             <h5>Price Range</h5>
                             <div class="col-10">
                                 <div class="priceFilter filterBlock row align-items-center">
-                                    <div class="col-4 px-0"><input type="text" class="form-control" name="price-from"></div>
+                                    <div class="col-4 px-0"><input type="number" min="0" max="{{$max}}" value="0" class="form-control" name="price-from"></div>
                                     <div class="col-2 text-center p-0">to</div>
-                                    <div class="col-4 px-0"><input type="text" class="form-control" name="price-to"></div>
+                                    <div class="col-4 px-0"><input type="number" min="0" max="{{$max}}" value="{{$max}}" class="form-control" name="price-to"></div>
                                     <div class="col-2">USD</div>
                                 </div>
                             </div>
