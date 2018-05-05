@@ -22,10 +22,10 @@
                 <div class="col-4 menu">
                     <div class="row">
                         <div class="col-3">
-                            <a href="#">Home</a>
+                            <a href="{{route('index')}}">Home</a>
                         </div>
                         <div class="col-3">
-                            <a href="#">Gallery</a>
+                            <a href="{{route('catalog')}}">Gallery</a>
                         </div>
                         <div class="col-3">
                             <a href="#">Categories</a>
@@ -37,7 +37,9 @@
                 </div>
                 <div class="col-4">
                     <div class="row">
-                        <img src="{{asset('img/Shophia.png')}}" alt="logo" class="m-auto">
+                        <a href="{{route('index')}}" class="logo">
+                            <img src="{{asset('img/Shophia.png')}}" alt="logo" class="m-auto">
+                        </a>
                     </div>
                 </div>
                 <div class="col-4">

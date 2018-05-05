@@ -7,6 +7,10 @@
 @import '~slick-carousel/slick/slick';
 @import '~slick-carousel/slick/slick-theme';
 
+//.pagination{
+//  margin: 20px auto;
+//}
+
 header{
   .top-line{
     background-color: lightgray;
@@ -16,7 +20,6 @@ header{
       margin:0px 10px;
     }
     .top-menu{
-
       div{
         padding: 0;
         text-transform: uppercase;
@@ -32,7 +35,10 @@ header{
       color: black;
     }
   }
-
+  .logo{
+    display: block;
+    margin: 0 auto;
+  }
   .social{
     height: 35px;
     width: 35px;

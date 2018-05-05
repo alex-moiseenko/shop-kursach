@@ -10700,6 +10700,11 @@ header .menu a {
   color: black;
 }
 
+header .logo {
+  display: block;
+  margin: 0 auto;
+}
+
 header .social {
   height: 35px;
   width: 35px;

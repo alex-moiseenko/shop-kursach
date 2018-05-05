@@ -19,21 +19,14 @@ Auth::routes();
 
 Route::get('/laravel', 'HomeController@index')->name('home');
 
-Route::get('/', function (){
-    return view('index');
-});
+Route::get('/', 'IndexController@index')->name('index');
 
-Route::get('/catalog', function (){
-    return view('catalog');
-});
+Route::get('/catalog', 'CatalogController@index')->name('catalog');
+Route::post('/catalog/filter', 'CatalogController@filter')->name('catalog-filter');
 
-Route::get('/product', function (){
-    return view('product');
-});
+Route::get('/product/{id}', 'IndexController@product');
 
-Route::get('/checkout', function (){
-    return view('checkout');
-});
+Route::get('/checkout', 'IndexController@checkout')->name('checkout');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
