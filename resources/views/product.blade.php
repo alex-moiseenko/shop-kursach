@@ -18,9 +18,15 @@
                     <div class="col-lg-6">
                         <img src="{{$product->main_img}}" class="image">
                     </div>
-                    <div class="col-lg-6">
-                        <img src="{{$product->additional_img}}" class="image">
-                    </div>
+                    @foreach(json_decode($product->additional_img) as $img)
+                        @if($loop->index > 0)
+                            <div class="col-lg-6 pt-4">
+                        @else
+                            <div class="col-lg-6">
+                        @endif
+                                <img src="{{$img}}" class="image">
+                            </div>
+                    @endforeach
                 </div>
                 <div class="description">
                     <h5>Description</h5>
@@ -29,11 +35,19 @@
 
             </div>
             <div class="col-md-6 col-lg-4 side-menu">
-                <span>{{$product->name}}</span>
+                <h4>{{$product->name}}</h4>
+                @if($product->available)
+                    @if($product->sale >= 0 && $product->sale != null)
+                        <span class="text-danger"><s>{{$product->price}} usd</s></span>
+                        <span>{{$product->price_with_sale}} usd</span>
+                    @else
+                        <span>{{$product->price}} usd</span>
+                    @endif
+                @else
+                    <span class="text-muted">Out of stock</span>
+                @endif
                 <br>
-                <span>{{$product->price}} USD</span>
-                <br>
-                <div class="size-selector">
+                <div class="size-selector pt-3">
                     <label for="inputState">Select size</label><br>
                     <div class="form-group">
                         <select id="inputState" class="form-control">

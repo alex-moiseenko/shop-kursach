@@ -13,7 +13,7 @@ $factory->define(App\Product::class, function (Faker $faker) {
         'color'           => $faker->hexcolor,
         'sizes'           => json_encode($faker->randomElements($array = ['XS', 'S', 'M', 'L', 'XL'], $count = 3)),
         'main_img'        => $faker->imageUrl($width = 400, $height = 800, 'cats'),
-        'additional_img'  => $faker->imageUrl($width = 400, $height = 800, 'cats'),
+        'additional_img'  => json_encode(["http://lorempixel.com/400/800/cats/Faker/","http://lorempixel.com/400/800/cats/Faker/","http://lorempixel.com/400/800/cats/Faker/"]),
         'available'       => $faker->randomElement($array = [1, 0]),
     ];
 });
