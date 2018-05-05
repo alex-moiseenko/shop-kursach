@@ -21,60 +21,121 @@
             <div class="thinline"></div>
             <h5>New customer</h5>
             <div class="thinline"></div>
-            <label class="labels">First name</label>
-            <input type="text" >
-            <br>
-            <label class="labels">Last name</label>
-            <input type="text">
-            <br>
-            <label class="labels">Email</label>
-            <input type="text">
-            <br>
-            <label class="labels">Password</label>
-            <input type="password">
-            <br>
-            <label class="labels">Phone number</label>
-            <input type="text">
+            <form>
+                <div class="form-group row">
+                    <label for="inputFirstName" class="col-sm-2  col-form-label">First name</label>
+                    <div class="col-sm-10 ">
+                        <input type="text" class="form-control" id="inputFirstName" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputLastName" class="col-sm-2 col-form-label">Last name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputLastName" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPhone" class="col-sm-2 col-form-label">Phone</label>
+                    <div class="col-sm-10">
+                        <input type="tel" class="form-control" id="inputPhone" placeholder="">
+                    </div>
+                </div>
 
-            <div class="thinline"></div>
-            <h5>Delivery address</h5>
-            <div class="thinline"></div>
-            <label class="labels">Country</label>
-            <input type="text">
-            <br>
-            <label class="labels">Region</label>
-            <input type="text">
-            <br>
-            <label class="labels">City</label>
-            <input type="password">
-            <br>
-            <label class="labels">Delivery address or NP depot number</label>
-            <input type="text">
-            <br>
-            <label class="labels textareas">Comments</label>
-            <textarea rows="3"></textarea>
-            <br>
+                <div class="thinline"></div>
+                <h5>Delivery address</h5>
+                <div class="thinline"></div>
 
-            <div class="thinline"></div>
-            <h5>Delivery methods</h5>
-            <div class="thinline"></div>
+                <div class="form-group row">
+                    <label for="inputCountry" class="col-sm-2 col-form-label">Country</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputCountry" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputRegion" class="col-sm-2 col-form-label">Region</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputRegion" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputCity" class="col-sm-2 col-form-label">City</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputCity" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputAddress" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputNP" class="col-sm-2 col-form-label">Nova Poshta depot</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputNP" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputComments" class="col-sm-2 col-form-label">Comments</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="inputComments" rows="3"></textarea>
+                    </div>
+                </div>
 
-            <div>
-                <input type="radio" name="deliveryMethod" value="express"><span class="delivery">Express delivery</span>
-                <input type="radio" name="deliveryMethod" value="np"><span class="delivery">Nova Poshta</span>
-            </div>
 
-            <div class="thinline"></div>
-            <h5>Payment</h5>
-            <div class="thinline"></div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Delivery</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="expressDelivery" value="option1" checked>
+                                <label class="form-check-label" for="inputExpressDelivery">
+                                    Express delivery
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="novaPoshta" value="option2">
+                                <label class="form-check-label" for="inputNovaPoshta">
+                                    Nova Poshta
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
 
-            <div>
-                <input type="radio" name="payingMethod" value="prepayment"><span class="payment">Prepayment</span>
-                <input type="radio" name="payingMethod" value="cashPayment"><span class="payment">Cash Payment</span>
-            </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Payment </legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios2" id="prepayment" value="option1" checked>
+                                <label class="form-check-label" for="inputPrepayment">
+                                    Prepayment
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios2" id="cash" value="option2">
+                                <label class="form-check-label" for="inputCash">
+                                    Cash
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
 
-            <div class="thinline"></div>
-            <button type="submit" class="confirm-button">Confirm</button>
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <div class=" offset-1 col-lg-4 yourOrder">
             <h5>Cart</h5>
