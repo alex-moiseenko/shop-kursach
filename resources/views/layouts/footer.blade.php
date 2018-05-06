@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-md-2 col-lg-2 infoColumn">
                     <p>shops</p>
                     <ul>
                         <li>New In</li>
@@ -16,7 +16,7 @@
                     </ul>
 
                 </div>
-                <div class="col-lg-2">
+                <div class="col-md-2  col-lg-2 infoColumn">
                     <p>information</p>
                     <ul>
                         <li>About us</li>
@@ -30,7 +30,7 @@
                     </ul>
 
                 </div>
-                <div class="col-lg-3">
+                <div class="col-md-3 col-lg-3 infoColumn">
                     <p>customer service</p>
                     <ul>
                         <li>Search Terms</li>
@@ -44,7 +44,7 @@
                     </ul>
 
                 </div>
-                <div class="col-lg-3">
+                <div class="col-md-5 col-lg-5">
                     <p class="stayConnect">stay connected</p>
                     <div class="row socialMedias">
                         <div class="col-2">
@@ -82,7 +82,7 @@
                 <span class="rightsSign">Designed by MoccalLabs.com<br></span>
             </div>
             <div class="row ">
-                <div class="col-2 row">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 row">
                     <div class="col-3">
                         <a href="" class="payment"><i class="fab fa-cc-visa"></i></a>
                     </div>

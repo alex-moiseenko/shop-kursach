@@ -13,16 +13,16 @@
 @section('main')
     <div class="container productPage">
         <div class="row">
-            <div class="col-md-6 col-lg-8">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-8">
                 <div class="row images">
-                    <div class="col-lg-6">
-                        <img src="{{$product->main_img}}" class="image">
+                    <div class="col-6 col-sm-6 col-md-12 col-lg-6">
+                        <img src="{{$product->main_img}}" class="image mainImage">
                     </div>
                     @foreach(json_decode($product->additional_img) as $img)
                         @if($loop->index > 0)
-                            <div class="col-lg-6 pt-4">
+                            <div class="col-6 col-sm-6 col-md-12 col-lg-6 pt-4">
                         @else
-                            <div class="col-lg-6">
+                            <div class="col-6 col-sm-6 col-md-12 col-lg-6">
                         @endif
                                 <img src="{{$img}}" class="image">
                             </div>
@@ -34,7 +34,7 @@
                 </div>
 
             </div>
-            <div class="col-md-6 col-lg-4 side-menu">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 side-menu">
                 <h4>{{$product->name}}</h4>
                 @if($product->available)
                     @if($product->sale >= 0 && $product->sale != null)

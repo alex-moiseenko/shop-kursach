@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/gallery', function () {
+    return view('gallery');
+});
+
 Auth::routes();
 
 Route::get('/laravel', 'HomeController@index')->name('home');

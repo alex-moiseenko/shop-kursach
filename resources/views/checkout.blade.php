@@ -13,8 +13,8 @@
 @section('main')
 
 <div class="container checkoutPage">
-    <div class="row">
-        <div class="col-lg-7  customerData">
+    <div class="row justify-content-between">
+        <div class="col-lg-7 customerData">
             <h5>Returning customer</h5>
             <div class="thinline"></div>
             <a href="">Click here</a>
@@ -94,13 +94,13 @@
                         <legend class="col-form-label col-sm-2 pt-0">Delivery</legend>
                         <div class="col-sm-10">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="expressDelivery" value="option1" checked>
+                                <input class="form-check-input" type="radio" name="gridRadios" id="inputExpressDelivery" value="option1" checked>
                                 <label class="form-check-label" for="inputExpressDelivery">
                                     Express delivery
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="novaPoshta" value="option2">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="inputNovaPoshta" value="option2">
                                 <label class="form-check-label" for="inputNovaPoshta">
                                     Nova Poshta
                                 </label>
@@ -114,13 +114,13 @@
                         <legend class="col-form-label col-sm-2 pt-0">Payment </legend>
                         <div class="col-sm-10">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios2" id="prepayment" value="option1" checked>
+                                <input class="form-check-input" type="radio" name="gridRadios2" id="inputPrepayment" value="option1" checked>
                                 <label class="form-check-label" for="inputPrepayment">
                                     Prepayment
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios2" id="cash" value="option2">
+                                <input class="form-check-input" type="radio" name="gridRadios2" id="inputCash" value="option2">
                                 <label class="form-check-label" for="inputCash">
                                     Cash
                                 </label>
@@ -137,7 +137,7 @@
                 </div>
             </form>
         </div>
-        <div class=" offset-1 col-lg-4 yourOrder">
+        <div class="col-lg-4 yourOrder">
             <h5>Cart</h5>
             <div class="thinline"></div>
 

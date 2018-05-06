@@ -10670,6 +10670,26 @@ a.text-dark:focus {
   opacity: 0.75;
 }
 
+@media (max-width: 768px) {
+  .handPickedContent {
+    display: none;
+  }
+
+  .handPickedHeader {
+    display: none;
+  }
+
+  .infoColumn {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .longitemDiv {
+    display: none;
+  }
+}
+
 header .top-line {
   background-color: lightgray;
   font-size: 0.7em;
@@ -10854,16 +10874,24 @@ header .social:hover {
 }
 
 .customerService .shipment .arrow1 {
+  width: 30px;
+  height: 90px;
+  position: relative;
+  z-index: 1;
   background-color: white;
+  margin-left: -14px;
 }
 
 .customerService .shipment .triangle1 {
+  position: relative;
+  z-index: 2;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 40px 0 40px 30px;
   border-color: transparent transparent transparent #dcc088;
   margin-left: -15px;
+  margin-top: -90px;
 }
 
 .customerService .returns {
@@ -10873,6 +10901,7 @@ header .social:hover {
 }
 
 .customerService .returns .serviceImg2 {
+  width: 100%;
   margin: 18px 0px;
 }
 
@@ -10905,16 +10934,24 @@ header .social:hover {
 }
 
 .customerService .support .arrow1 {
+  width: 30px;
+  height: 90px;
+  position: relative;
+  z-index: 1;
   background-color: white;
+  margin-left: -15px;
 }
 
 .customerService .support .triangle4 {
+  position: relative;
+  z-index: 2;
+  margin-top: -90px;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 40px 30px 40px 0;
   border-color: transparent #dcc088 transparent transparent;
-  margin-left: -13px;
+  margin-left: -14px;
 }
 
 .paragraphHeader {
@@ -11269,6 +11306,10 @@ footer .payment {
   margin-bottom: 40px;
 }
 
+.productPage .images .mainImage {
+  margin-bottom: 20px;
+}
+
 .productPage .images .image {
   width: 100%;
 }
@@ -11378,7 +11419,7 @@ footer .payment {
 .checkoutPage .yourOrder {
   border: 1px solid lightgrey;
   padding: 20px;
-  height: 300px;
+  height: 250px;
 }
 
 .checkoutPage .yourOrder .cartText {
@@ -11387,5 +11428,29 @@ footer .payment {
 
 .checkoutPage .yourOrder .money {
   width: 20%;
+}
+
+.gallery {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.gallery a {
+  color: black;
+  text-decoration: none;
+}
+
+.gallery .gallerySections {
+  margin-bottom: 20px;
+}
+
+.gallery .galleryImage {
+  width: 100%;
+  height: 300px;
+}
+
+.gallery .categories {
+  margin: 20px 0px;
+  text-align: center;
 }
 
