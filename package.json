@@ -20,6 +20,8 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "slick-carousel": "^1.8.1"
+        "slick-carousel": "^1.8.1",
+        "sweetalert": "^2.1.0",
+        "toastr": "^2.1.4"
     }
 }

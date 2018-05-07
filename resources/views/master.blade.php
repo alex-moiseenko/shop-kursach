@@ -17,6 +17,11 @@
 {{--header--}}
 @include('layouts.header')
 
+{{--cart--}}
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="cart">
+    @include('cart.cart')
+</div>
+
 <main>
     @yield('main')
 </main>

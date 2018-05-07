@@ -50,14 +50,14 @@
                 <div class="size-selector pt-3">
                     <label for="inputState">Select size</label><br>
                     <div class="form-group">
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
+                        <select id="select-size" class="form-control">
+                            <option disabled value="" selected>Choose...</option>
                             @foreach(json_decode($product->sizes) as $size)
                                 <option>{{$size}}</option>
                             @endforeach
                         </select>
                     </div>
-                    <button type="submit" class="add-to-cart-button">Add to cart</button>
+                    <div class="add-to-cart-button" data-id="{{$product->id}}">Add to cart</div>
                 </div>
             </div>
         </div>

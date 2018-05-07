@@ -1,3 +1,9 @@
+@php
+    if (session()->has('cart')){
+    $cart = session()->get('cart');
+    }
+@endphp
+
 <header>
     <div class="container-fluid top-line">
         <div class="container py-3">
@@ -61,9 +67,13 @@
                             </div>
 
                         </div>
-                        <div class="col-3 cart">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="counter">5</span>
+                        <div class="col-3 cart get-cart p-0">
+                            <i class="fas fa-2x fa-shopping-cart"></i>
+                            @if(isset($cart))
+                                <span class="cart-count">{{$cart->totalQty}}</span>
+                            @else
+                                <span class="cart-count">0</span>
+                            @endif
                         </div>
                     </div>
                 </div>

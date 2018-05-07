@@ -14,7 +14,11 @@ class IndexController extends Controller
 
     public function index()
     {
-        return view('index');
+        if (session()->has('cart'))
+        {
+            $cart = session()->get('cart');
+        }
+        return view('index',compact('cart'));
     }
 
     public function checkout(){
@@ -22,7 +26,11 @@ class IndexController extends Controller
     }
 
     public function product($id){
+        if (session()->has('cart'))
+        {
+            $cart = session()->get('cart');
+        }
         $product = Product::find($id);
-        return view('product',compact('product'));
+        return view('product',compact('product', 'cart'));
     }
 }

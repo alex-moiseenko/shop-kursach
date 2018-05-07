@@ -30,7 +30,13 @@ Route::post('/catalog/filter', 'CatalogController@filter')->name('catalog-filter
 
 Route::get('/product/{id}', 'IndexController@product');
 
-Route::get('/checkout', 'IndexController@checkout')->name('checkout');
+
+//cart
+Route::get('/cart/add','CartController@addItem')->name('addItem');
+Route::get('/cart/get','CartController@getCart')->name('getCart');
+Route::get('/cart/remove','CartController@remove')->name('remove');
+Route::get('/cart/item_count','CartController@item_count')->name('item_count');
+Route::post('/cart/checkout','CartController@checkout')->name('checkout');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

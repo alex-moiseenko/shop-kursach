@@ -6,43 +6,26 @@
 //Slick Carouse;
 @import '~slick-carousel/slick/slick';
 @import '~slick-carousel/slick/slick-theme';
+@import 'toastr';
 
 //.pagination{
 //  margin: 20px auto;
 //}
 
-@media (max-width: 768px) {
-  .handPickedContent{
-    display: none;
-  }
-  .handPickedHeader{
-    display: none;
-  }
-  .infoColumn{
-    display: none;
-  }
-}
-
-@media (max-width: 992px) {
-  .longitemDiv{
-    display:none;
-  }
-}
-
-header{
-  .top-line{
+header {
+  .top-line {
     background-color: lightgray;
     font-size: 0.7em;
-    .phone{
+    .phone {
       transform: rotate(90deg);
-      margin:0px 10px;
+      margin: 0px 10px;
     }
-    .top-menu{
-      div{
+    .top-menu {
+      div {
         padding: 0;
         text-transform: uppercase;
       }
-      div:nth-child(1),div:nth-child(2),div:nth-child(3){
+      div:nth-child(1), div:nth-child(2), div:nth-child(3) {
         border-right: 1px solid black;
       }
     }
@@ -53,11 +36,11 @@ header{
       color: black;
     }
   }
-  .logo{
+  .logo {
     display: block;
     margin: 0 auto;
   }
-  .social{
+  .social {
     height: 35px;
     width: 35px;
     color: $ochra;
@@ -66,16 +49,22 @@ header{
     border-radius: 50%;
     text-align: center;
     display: block;
-    &:hover{
+    &:hover {
       background-color: $ochra;
       color: white;
+    }
+  }
+  .get-cart {
+    cursor: pointer;
+    .cart-count {
+      position: relative;
+      top: -5px;
     }
   }
 
 }
 
-
-.triangle{
+.triangle {
   display: block;
   margin: 0 auto;
   width: 0;
@@ -87,82 +76,101 @@ header{
   z-index: 100;
 }
 
-#carousel{
+#carousel {
   margin-top: -60px;
   position: relative;
   z-index: 1;
-  .my-slide{
+  .my-slide {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 700px;
   }
-  .slick-dots{
+  .slick-dots {
     bottom: 20px !important;
   }
-  div{
-      text-transform: uppercase;
-      text-align: center;
-      margin: 0 auto;
+  div {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
 
-      .border1 {
-        width: 300px;
-        margin-top: 150px;
-        border: 2px solid white;
-        height: 250px;
+    .border1 {
+      width: 300px;
+      margin-top: 150px;
+      border: 2px solid white;
+      height: 250px;
+    }
+
+    .border2 {
+      border: 1px solid white;
+      height: 96%;
+      width: 96%;
+      margin: 2% 2%;
+    }
+    h6 {
+      color: white;
+      margin: 17px 0px;
+    }
+    p {
+      color: white;
+    }
+
+    .smallerline1 {
+      height: 1px;
+      width: 50%;
+      background-color: white;
+      margin: 10px 0px;
+      float: right;
+    }
+    .biggerline1 {
+      height: 1px;
+      background-color: white;
+      width: 70%;
+      float: right;
+    }
+    .smallerline2 {
+      height: 1px;
+      width: 50%;
+      background-color: white;
+      margin: 10px 0px;
+      float: left;
+    }
+    .biggerline2 {
+      height: 1px;
+      background-color: white;
+      width: 70%;
+      float: left;
+    }
+
+    .shopNow {
+      background-color: darkorange;
+      height: 50px;
+      width: 80%;
+      margin: 50px auto;
+      p {
+        padding: 13px 0px;
       }
+    }
+  }
+}
 
-        .border2 {
-          border: 1px solid white;
-          height: 96%;
-          width: 96%;
-          margin: 2% 2%;
-        }
-        h6 {
-          color: white;
-          margin: 17px 0px;
-        }
-        p {
-          color: white;
-        }
-
-        .smallerline1 {
-          height: 1px;
-          width: 50%;
-          background-color: white;
-          margin: 10px 0px;
-          float: right;
-        }
-        .biggerline1 {
-          height: 1px;
-          background-color: white;
-          width: 70%;
-          float: right;
-        }
-        .smallerline2 {
-          height: 1px;
-          width: 50%;
-          background-color: white;
-          margin: 10px 0px;
-          float: left;
-        }
-        .biggerline2 {
-          height: 1px;
-          background-color: white;
-          width: 70%;
-          float: left;
-        }
-
-        .shopNow {
-          background-color: darkorange;
-          height: 50px;
-          width: 80%;
-          margin: 50px auto;
-          p {
-            padding: 13px 0px;
-          }
-        }
-
+#cart{
+  .modal-body{
+    .image{
+      text-align: center;
+      img{
+        max-width: 100%;
+        max-height: 100px;
+      }
+    }
+    .qty{
+      width: 40px;
+      text-align: center;
+    }
+    .minus, .plus{
+      font-size: 1.5em;
+      cursor: pointer;
+    }
   }
 }
 
@@ -183,16 +191,16 @@ header{
     font-size: 0.7em;
   }
 
-  .serviceImg{
-    margin: 20px 0px ;
+  .serviceImg {
+    margin: 20px 0px;
   }
 
-  .shipment{
+  .shipment {
     background-color: $ochra;
     height: 100%;
     width: 100%;
-    .serviceImg1{
-      margin: 20px 0px ;
+    .serviceImg1 {
+      margin: 20px 0px;
     }
 
     .arrow1{
@@ -205,15 +213,12 @@ header{
 
     }
     .triangle1{
-      position: relative;
-      z-index: 2;
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 40px 0 40px 30px;
       border-color: transparent transparent transparent $ochra;
       margin-left: -15px;
-      margin-top:-90px;
 
     }
 
@@ -677,6 +682,8 @@ footer{
         background: #111111;
         padding: 10px;
         color: white;
+        text-align: center;
+        cursor: pointer;
       }
     }
 
@@ -704,7 +711,6 @@ footer{
   .customerData{
     border: 1px solid lightgrey;
     padding: 20px;
-
     input {
       width: 75%;
     }
@@ -745,7 +751,7 @@ footer{
   .yourOrder{
     border: 1px solid lightgrey;
     padding: 20px;
-    height: 250px;
+    height: 300px;
     .cartText{
       width: 80%;
     }

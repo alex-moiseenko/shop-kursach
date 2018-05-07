@@ -9,7 +9,6 @@ class CatalogController extends Controller {
 
     public function index()
     {
-
         $products = Product::latest()->orderBy('available', 'desc')->paginate(12);
         $all = Product::all();
         $max = intval($all->max('price'));
