@@ -8,8 +8,11 @@ require('./bootstrap');
 require('slick-carousel');
 
 import swal from 'sweetalert';
+
 import toastr from 'toastr';
 toastr.options.closeButton = true;
+// toastr.options.newestOnTop = false;
+toastr.options.onclick = function() { toastr.clear() }
 
 // window.Vue = require('vue');
 

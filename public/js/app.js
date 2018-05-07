@@ -39659,7 +39659,12 @@ __webpack_require__("./node_modules/slick-carousel/slick/slick.js");
 
 
 
+
 __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.options.closeButton = true;
+// toastr.options.newestOnTop = false;
+__WEBPACK_IMPORTED_MODULE_1_toastr___default.a.options.onclick = function () {
+    __WEBPACK_IMPORTED_MODULE_1_toastr___default.a.clear();
+};
 
 // window.Vue = require('vue');
 
