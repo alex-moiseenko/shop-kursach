@@ -9,6 +9,12 @@
 @section('main')
     <div class="container catalogContainer">
         <div class="row">
+{{--
+            <div class="thinlineFilt"></div>
+            <input type="checkbox" id="hft" class="hidden-filter-ticker">
+            <label class="btn-filter" for="hft">Filrers</label>
+            <div class="thinlineFilt"></div>--}}
+
             <div class="col-lg-3 filters">
                 <form action="{{route('catalog-filter')}}" method="post">
                     @csrf
