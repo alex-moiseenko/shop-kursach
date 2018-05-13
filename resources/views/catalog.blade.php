@@ -9,13 +9,14 @@
 @section('main')
     <div class="container catalogContainer">
         <div class="row">
-{{--
-            <div class="thinlineFilt"></div>
-            <input type="checkbox" id="hft" class="hidden-filter-ticker">
-            <label class="btn-filter" for="hft">Filrers</label>
-            <div class="thinlineFilt"></div>--}}
 
-            <div class="col-lg-3 filters">
+            <div class="thinlineFilt1"></div>
+            <input type="checkbox" id="hft" class="hidden-filter-ticker">
+            <label class="btn-filter" for="hft">Filters</label>
+
+            <div class="thinlineFilt2"></div>
+
+            <div class="col-md-4 col-lg-3 filters">
                 <form action="{{route('catalog-filter')}}" method="post">
                     @csrf
                     <div class="row">
@@ -115,10 +116,10 @@
                 </form>
             </div>
 
-            <div class="col-lg-9 catalogItems">
+            <div class=" col-md-8 col-lg-9 catalogItems">
                 <div class="row">
                     @foreach($products as $product)
-                        <div class="catalogItem col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                        <div class="catalogItem col-lg-4 col-md-6 col-sm-6 col-6">
                             <a href="{{url('/product/'.$product->id)}}">
                                 <img src="{{$product->main_img}}" class="images">
                                 <span>{{$product->name}}</span><br>
