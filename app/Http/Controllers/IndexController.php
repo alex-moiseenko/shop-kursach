@@ -7,30 +7,31 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+    var $cart;
+
     public function __construct()
     {
-//        $this->middleware('auth');
+        if (session()->has('cart'))
+        {
+            $this->cart = session()->get('cart');
+        }
     }
 
     public function index()
     {
-        if (session()->has('cart'))
-        {
-            $cart = session()->get('cart');
-        }
-        return view('index',compact('cart'));
+        return view('index',compact('this->cart'));
     }
 
     public function checkout(){
-        return view('checkout');
+        return view('checkout','this->cart');
     }
 
     public function product($id){
-        if (session()->has('cart'))
-        {
-            $cart = session()->get('cart');
-        }
         $product = Product::find($id);
-        return view('product',compact('product', 'cart'));
+        return view('product',compact('product', 'this->cart'));
+    }
+
+    public function categories(){
+        return view('categories', compact('this->cart'));
     }
 }

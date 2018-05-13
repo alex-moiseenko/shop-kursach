@@ -54,10 +54,10 @@
                             <a href="{{route('catalog')}}">Gallery</a>
                         </div>
                         <div class="col-3">
-                            <a href="#">Categories</a>
+                            <a href="{{route('categories')}}">Categories</a>
                         </div>
                         <div class="col-3">
-                            <a href="#">Pages</a>
+                            <a href="#" class="text-muted">Pages</a>
                         </div>
                     </div>
                 </div>

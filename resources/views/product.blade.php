@@ -21,47 +21,50 @@
                     @foreach(json_decode($product->additional_img) as $img)
                         @if($loop->index > 0)
                             <div class="col-6 col-sm-6 col-md-12 col-lg-6 pt-4">
-                        @else
-                            <div class="col-6 col-sm-6 col-md-12 col-lg-6">
-                        @endif
-                                <img src="{{$img}}" class="image">
+                                @else
+                                    <div class="col-6 col-sm-6 col-md-12 col-lg-6">
+                                        @endif
+                                        <img src="{{$img}}" class="image">
+                                    </div>
+                                    @endforeach
                             </div>
-                    @endforeach
-                </div>
-                <div class="description">
-                    <h5>Description</h5>
-                    <span>{{$product->description}}</span>
-                </div>
+                            <div class="description">
+                                <h5>Description</h5>
+                                <span>{{$product->description}}</span>
+                            </div>
 
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 side-menu">
-                <h4>{{$product->name}}</h4>
-                @if($product->available)
-                    @if($product->sale >= 0 && $product->sale != null)
-                        <span class="text-danger"><s>{{$product->price}} usd</s></span>
-                        <span>{{$product->price_with_sale}} usd</span>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 side-menu">
+                    <h4>{{$product->name}}</h4>
+                    @if($product->available)
+                        @if($product->sale >= 0 && $product->sale != null)
+                            <span class="text-danger"><s>{{$product->price}} usd</s></span>
+                            <span>{{$product->price_with_sale}} usd</span>
+                        @else
+                            <span>{{$product->price}} usd</span>
+                        @endif
                     @else
-                        <span>{{$product->price}} usd</span>
+                        <span class="text-muted">Out of stock</span>
                     @endif
-                @else
-                    <span class="text-muted">Out of stock</span>
-                @endif
-                <br>
-                <div class="size-selector pt-3">
-                    <label for="inputState">Select size</label><br>
-                    <div class="form-group">
-                        <select id="select-size" class="form-control">
-                            <option disabled value="" selected>Choose...</option>
-                            @foreach(json_decode($product->sizes) as $size)
-                                <option>{{$size}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="add-to-cart-button" data-id="{{$product->id}}">Add to cart</div>
+                    <br>
+                    @if($product->available)
+                        <div class="size-selector pt-3">
+                            <label for="inputState">Select size</label><br>
+                            <div class="form-group">
+                                <select id="select-size" class="form-control">
+                                    <option disabled value="" selected>Choose...</option>
+                                    @foreach(json_decode($product->sizes) as $size)
+                                        <option>{{$size}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-button" data-id="{{$product->id}}">Add to cart</div>
+                    @endif
+
                 </div>
             </div>
         </div>
-    </div>
 
 @endsection
 

@@ -21,15 +21,17 @@ Route::get('/gallery', function () {
 
 Auth::routes();
 
-Route::get('/laravel', 'HomeController@index')->name('home');
+//Route::get('/laravel', 'HomeController@index')->name('home');
 
 Route::get('/', 'IndexController@index')->name('index');
 
 Route::get('/catalog', 'CatalogController@index')->name('catalog');
-Route::post('/catalog/filter', 'CatalogController@filter')->name('catalog-filter');
+Route::get('/catalog/filter', 'CatalogController@filter')->name('catalog-filter');
+Route::get('/catalog/{category}', 'CatalogController@category')->name('catalog-category');
+
+Route::get('/categories', 'IndexController@categories')->name('categories');
 
 Route::get('/product/{id}', 'IndexController@product');
-
 
 //cart
 Route::get('/cart/add','CartController@addItem')->name('addItem');
@@ -40,4 +42,5 @@ Route::post('/cart/checkout','CartController@checkout')->name('checkout');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    Route::get('products', 'AdminController@products');
 });
