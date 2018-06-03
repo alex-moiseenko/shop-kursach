@@ -14,6 +14,12 @@
 </head>
 <body>
 
+@php
+    if (session()->has('cart')){
+    $cart = session()->get('cart');
+    }
+@endphp
+
 {{--header--}}
 @include('layouts.header')
 

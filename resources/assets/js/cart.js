@@ -120,6 +120,10 @@ modal_cart.on('change', '.qty', function () {
     }
 });
 
+modal_cart.on('click', '#checkout_btn', function () {
+    window.location.href = "/checkout";
+});
+
 function changeQty(id, qty) {
     $.ajax({
         type: "GET",

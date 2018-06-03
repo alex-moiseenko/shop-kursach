@@ -12,9 +12,7 @@ class CatalogController extends Controller
 {
 
     public function index() {
-        $products = DB::table('product_size')
-            ->join('products', 'product_size.product_id', '=', 'products.id')
-            ->join('sizes', 'product_size.size_id', '=', 'sizes.id')
+        $products = DB::table('products')
             ->orderBy('available', 'desc')
             ->paginate(12);
 
@@ -22,6 +20,12 @@ class CatalogController extends Controller
         $max = intval($all->max('price'));
 
         return view('catalog.catalog', compact('products', 'max'));
+    }
+
+    public function product($id){
+
+        $product = Product::find($id);
+        return view('product',compact('product'));
     }
 
     public function filter(Request $request) {

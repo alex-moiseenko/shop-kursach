@@ -99,8 +99,19 @@ class CartController extends Controller {
         }
     }
 
+    public function checkout_page(){
+        if (session()->has('cart') and !empty(session()->get('cart')->items))
+        {
+            $cart = session()->get('cart');
+        }
+
+        return view('checkout', compact('cart'));
+    }
+
     public function checkout(Request $request)
     {
+
+//        dd($request->all());
         $cart = session()->get('cart');
 
         foreach ($cart->items as $item)
@@ -114,74 +125,87 @@ class CartController extends Controller {
         }
 
         $cartTotalPrice = $cart->totalPrice;
-        $name = $request->input('name');
+        $firstName = $request->input('firstName');
+        $lastName = $request->input('lastName');
         $email = $request->input('email');
         $phone = $request->input('phone');
-        $payment = $request->input('payment');
-        $address = $request->input('address');
-        $comment = $request->input('comment');
-        if (empty($comment))
-        {
-            $comment = "";
-        }
 
-        $user_id = DB::table('customers')->insertGetId([
-                'name'       => $name,
+        $country = $request->input('country');
+        $region = $request->input('region');
+        $city = $request->input('city');
+        $address = $request->input('address');
+        $np = $request->input('np');
+        $comment = $request->input('comment');
+        $delivery = $request->input('delivery');
+
+        $payment = $request->input('payment');
+
+//        if (empty($comment))
+//        {
+//            $comment = "";
+//        }
+
+        $user_id = DB::table('guests')->insertGetId([
+                'first_name'       => $firstName,
+                'last_name'       => $lastName,
                 'email'      => $email,
                 'phone'      => $phone,
-                'address'    => $address,
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ]
         );
 
-
         $transaction = DB::table('orders')->insertGetId([
-            'customer_id' => $user_id,
-            'cart'        => json_encode($cart->items, JSON_UNESCAPED_UNICODE),
-            'payment'     => $payment,
+            'guest_id' => $user_id,
+            'country' => $country,
+            'region' => $region,
+            'city' => $city,
+            'delivery_address' => $address,
+            'delivery_method' => $delivery,
+            'payment' => $payment,
             'comment'     => $comment,
+            'order'        => json_encode($cart->items, JSON_UNESCAPED_UNICODE),
             'created_at'  => \Carbon\Carbon::now(),
             'updated_at'  => \Carbon\Carbon::now(),
         ]);
 
 
-        $data = [
-            'cart'    => $cart,
-            'name'    => $name,
-            'email'   => $email,
-            'payment' => $payment,
-            'phone'   => $phone,
-            'address' => $address,
-            'comment' => $comment,
-        ];
+//        $data = [
+//            'cart'    => $cart,
+//            'name'    => $name,
+//            'email'   => $email,
+//            'payment' => $payment,
+//            'phone'   => $phone,
+//            'address' => $address,
+//            'comment' => $comment,
+//        ];
 
 //        письмо заказчику
-        Mail::send('email.checkout', $data, function ($message) use ($data) {
-            $message->from('order@vognyar.com.ua');
-            $message->to($data['email']);
-            $message->subject('Дякуємо за Ваше замовлення!');
-        });
-//        письмо нам
-        Mail::send('email.checkout_for_us', $data, function ($message) use ($data) {
-            $message->from('order@vognyar.com.ua');
-            $message->to('vognyar@gmail.com');
-//            $message->cc('globa@vognyar.com');
-//            $message->cc('kachalovskaya@osdirect.com.ua');
-            $message->subject('Вогняр. Новая заявка с сайта');
-        });
+//        Mail::send('email.checkout', $data, function ($message) use ($data) {
+//            $message->from('order@vognyar.com.ua');
+//            $message->to($data['email']);
+//            $message->subject('Дякуємо за Ваше замовлення!');
+//        });
+////        письмо нам
+//        Mail::send('email.checkout_for_us', $data, function ($message) use ($data) {
+//            $message->from('order@vognyar.com.ua');
+//            $message->to('vognyar@gmail.com');
+////            $message->cc('globa@vognyar.com');
+////            $message->cc('kachalovskaya@osdirect.com.ua');
+//            $message->subject('Вогняр. Новая заявка с сайта');
+//        });
 
 
-        $json = [
-            'id'    => $transaction,
-            'sum'   => $cartTotalPrice,
-            'items' => $items
-        ];
+//        $json = [
+//            'id'    => $transaction,
+//            'sum'   => $cartTotalPrice,
+//            'items' => $items
+//        ];
 
-        $json = json_encode($json, JSON_UNESCAPED_UNICODE);
+//        $json = json_encode($json, JSON_UNESCAPED_UNICODE);
 
         session()->forget('cart');
 
-        return $json;
+        return redirect('/')->with('status', 'Thanks for your order!');
     }
 }

@@ -926,18 +926,15 @@ footer{
           }
         }
       }
-
-
-      .add-to-cart-button {
-        width: 100%;
-        background: #111111;
-        padding: 10px;
-        color: white;
-        text-align: center;
-        cursor: pointer;
-      }
     }
-
+    .add-to-cart-button {
+      width: 100%;
+      background: #111111;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+    }
 
   }
 }
@@ -963,19 +960,19 @@ footer{
     border: 1px solid lightgrey;
     padding: 20px;
     input {
-      width: 75%;
+      //width: 75%;
     }
     .labels{
-      width: 24%;
+      //width: 24%;
     }
     .textareas{
       vertical-align: top;
       display: inline-block;
-      width: 24%;
+      //width: 24%;
 
     }
     textarea{
-      width: 75%;
+      //width: 75%;
     }
 
     .delivery{
@@ -1002,12 +999,12 @@ footer{
   .yourOrder{
     border: 1px solid lightgrey;
     padding: 20px;
-    height: 300px;
     .cartText{
       width: 80%;
     }
     .money {
       width: 20%;
+      //text-align: right;
     }
   }
 }

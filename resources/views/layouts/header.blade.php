@@ -1,9 +1,3 @@
-@php
-    if (session()->has('cart')){
-    $cart = session()->get('cart');
-    }
-@endphp
-
 <header>
     <div class="container-fluid top-line">
         <div class="container py-3">
@@ -22,6 +16,17 @@
             </div>
         </div>
     </div>
+    @if (session('status'))
+        <div class="container-fluid alert alert-success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        {{ session('status') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 
     <div class="container-fluid">
         <div class="container">
@@ -90,9 +95,9 @@
                         <div class="col-4 col-sm-4 col-md-3 col-lg-3 cart get-cart p-0">
                             <i class="fas fa-2x fa-shopping-cart"></i>
                             @if(isset($cart))
-                                <span class="cart-count">{{$cart->totalQty}}</span>
+                                <span class="cart-count cart-total-count">{{$cart->totalQty}}</span>
                             @else
-                                <span class="cart-count">0</span>
+                                <span class="cart-count cart-total-count">0</span>
                             @endif
                         </div>
                     </div>

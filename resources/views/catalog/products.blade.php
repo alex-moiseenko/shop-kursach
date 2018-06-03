@@ -6,10 +6,10 @@
                 <span>{{$product->name}}</span><br>
                 @if($product->available)
                     @if($product->sale >= 0 && $product->sale != null)
-                        <span class="text-danger"><s>{{$product->price}} usd</s></span>
-                        <span>{{$product->price_with_sale}} usd</span>
+                        <span class="text-danger"><s>${{$product->price}}</s></span>
+                        <span>${{$product->price_with_sale}}</span>
                     @else
-                        <span>{{$product->price}} usd</span>
+                        <span>${{$product->price}}</span>
                     @endif
                 @else
                     <span class="text-muted">Out of stock</span>

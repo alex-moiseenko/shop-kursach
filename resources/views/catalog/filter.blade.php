@@ -93,7 +93,7 @@
                     <div class="col-4 px-0"><input type="number" min="0" max="{{$max}}" @if(isset($filters) && isset($filters['price-from'])) value="{{$filters['price-from']}}" @else value="0" @endif class="form-control" name="price-from"></div>
                     <div class="col-2 text-center p-0">to</div>
                     <div class="col-4 px-0"><input type="number" min="0" max="{{$max}}" @if(isset($filters) && isset($filters['price-to'])) value="{{$filters['price-to']}}" @else value="{{$max}}" @endif class="form-control" name="price-to"></div>
-                    <div class="col-2">USD</div>
+                    <div class="col-2">$</div>
                 </div>
             </div>
         </div>

@@ -16,55 +16,53 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-8">
                 <div class="row images">
                     <div class="col-6 col-sm-6 col-md-12 col-lg-6">
-                        <img src="{{$product->main_img}}" class="image mainImage">
+                        <img src="{{asset($product->main_img)}}" class="image mainImage">
                     </div>
-                    @foreach(json_decode($product->additional_img) as $img)
-                        @if($loop->index > 0)
-                            <div class="col-6 col-sm-6 col-md-12 col-lg-6 pt-4">
-                                @else
-                                    <div class="col-6 col-sm-6 col-md-12 col-lg-6">
-                                        @endif
-                                        <img src="{{$img}}" class="image">
-                                    </div>
-                                    @endforeach
+                    @if($product->additional_img != 'null')
+                        @foreach(json_decode($product->additional_img) as $img)
+                            <div class="col-6 col-sm-6 col-md-12 col-lg-6 @if($loop->index > 0) pt-4 @endif">
+                                <img src="{{asset($img)}}" class="image">
                             </div>
-                            <div class="description">
-                                <h5>Description</h5>
-                                <span>{{$product->description}}</span>
-                            </div>
-
+                        @endforeach
+                    @endif
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 side-menu">
-                    <h4>{{$product->name}}</h4>
-                    @if($product->available)
-                        @if($product->sale >= 0 && $product->sale != null)
-                            <span class="text-danger"><s>{{$product->price}} usd</s></span>
-                            <span>{{$product->price_with_sale}} usd</span>
-                        @else
-                            <span>{{$product->price}} usd</span>
-                        @endif
-                    @else
-                        <span class="text-muted">Out of stock</span>
-                    @endif
-                    <br>
-                    @if($product->available)
-                        <div class="size-selector pt-3">
-                            <label for="inputState">Select size</label><br>
-                            <div class="form-group">
-                                <select id="select-size" class="form-control">
-                                    <option disabled value="" selected>Choose...</option>
-                                    @foreach(json_decode($product->sizes) as $size)
-                                        <option>{{$size}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="add-to-cart-button" data-id="{{$product->id}}">Add to cart</div>
-                    @endif
-
+                <div class="row description">
+                    <div class="col-12">
+                        <h5>Description</h5>
+                        <span>{{$product->description}}</span>
+                    </div>
                 </div>
             </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 side-menu">
+                <h4>{{$product->name}}</h4>
+                @if($product->available)
+                    @if($product->sale >= 0 && $product->sale != null)
+                        <span class="text-danger"><s>${{$product->price}}</s></span>
+                        <span>${{$product->price_with_sale}}</span>
+                    @else
+                        <span>${{$product->price}}</span>
+                    @endif
+                @else
+                    <span class="text-muted">Out of stock</span>
+                @endif
+                <br>
+                @if($product->available)
+                    <div class="size-selector pt-3">
+                        <label for="inputState">Select size</label><br>
+                        <div class="form-group">
+                            <select id="select-size" class="form-control">
+                                <option disabled value="" selected>Choose...</option>
+                                @foreach(json_decode($product->sizes) as $size)
+                                    <option>{{$size->size}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="add-to-cart-button" data-id="{{$product->id}}">Add to cart</div>
+                @endif
+            </div>
         </div>
+    </div>
 
 @endsection
 
